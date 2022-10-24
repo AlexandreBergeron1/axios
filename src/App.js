@@ -1,24 +1,24 @@
-import './App.css';
+import React from 'react';
+import style from './App.css';
+//Import all components
+import Post from './components/Post';
+import CreatePost from './components/CreatePost';
+import PostList from './components/PostList';
 
 function App() {
+  //constants
+  const name = "Alexandre";
+  const message = "This is my message.";
+
+  //create our functions
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <h1>Bonjour {name}</h1>
+      <CreatePost />
+      <PostList />
+    </div> 
   );
-}
+};
 
 export default App;
